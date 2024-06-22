@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body>
+    <h1>Results</h1>
+    <ul>
+        {% for test in tests %}
+            <li>{{ test.date }} - Left Eye: {{ test.left_eye }}, Right Eye: {{ test.right_eye }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'vision_test' %}">Back to Test</a>
+</body>
+</html>
